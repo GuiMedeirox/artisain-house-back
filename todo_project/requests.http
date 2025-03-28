@@ -1,0 +1,45 @@
+### Listar todas as tarefas (com paginação)
+GET http://localhost:8000/api/tarefas/ HTTP/1.1
+Content-Type: application/json
+
+
+
+### Buscar tarefas pelo título ou descrição
+GET http://127.0.0.1:8000/api/tarefas/?search=Exemplo HTTP/1.1
+Content-Type: application/json
+
+
+
+### Criar uma nova tarefa
+POST http://127.0.0.1:8000/api/tarefas/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "titulo": "Comprar leite",
+  "descricao": "Comprar leite no mercado",
+  "prazo": "2024-03-28",
+  "situacao": "nova"
+}
+
+
+
+### Visualizar uma tarefa específica (ID = 1)
+GET http://127.0.0.1:8000/api/tarefas/1/ HTTP/1.1
+Content-Type: application/json
+
+
+
+### Atualizar uma tarefa (ID = 1)
+PATCH http://127.0.0.1:8000/api/tarefas/1/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "titulo": "Comprar leite editado",
+  "situacao": "em_andamento"
+}
+
+
+
+### Excluir uma tarefa (ID = 1)
+DELETE http://127.0.0.1:8000/api/tarefas/1/ HTTP/1.1
+Content-Type: application/json
